@@ -1,8 +1,6 @@
-import { Injectable, NestMiddleware, OnModuleInit } from '@nestjs/common'
-import { HttpAdapterHost } from '@nestjs/core'
+import { Injectable, NestMiddleware } from '@nestjs/common'
 import express, { NextFunction, Request, Response } from 'express'
-import { env } from 'src/server/utils/env'
-import { clientPath } from 'src/server/utils/path'
+import { clientPath } from '../../utils/path'
 import { SSRService } from './ssr.service'
 
 @Injectable()

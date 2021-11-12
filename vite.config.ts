@@ -4,7 +4,11 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export const viteConfig: UserConfig = {
   root: process.cwd(),
-  publicDir: 'dist/client',
+  resolve: {
+    alias:  {
+      "src": "src",
+    }
+  },
   plugins: [vue(), vueJsx()],
 }
 

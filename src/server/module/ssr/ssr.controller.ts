@@ -1,6 +1,6 @@
 import { Controller, Get, Header, Req, Res } from '@nestjs/common'
 import { Request, Response } from 'express'
-import { env } from 'src/server/utils/env'
+import { env } from '../../utils/env'
 import { SSRService } from './ssr.service'
 
 @Controller()

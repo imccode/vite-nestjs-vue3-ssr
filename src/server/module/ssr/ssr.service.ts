@@ -1,13 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
-import { HttpAdapterHost } from '@nestjs/core'
 import { readFileSync } from 'fs'
-import { TEMPLATE_SLOT } from 'src/server/utils/constant'
-import { env } from 'src/server/utils/env'
-import { clientPath, resolvePath, serverPath } from 'src/server/utils/path'
 import { createServer, ViteDevServer } from 'vite'
 import { App } from 'vue'
 import { Router } from 'vue-router'
 import { renderToString } from 'vue/server-renderer'
+import { TEMPLATE_SLOT } from '../../utils/constant'
+import { env } from '../../utils/env'
+import { clientPath, resolvePath } from '../../utils/path'
 
 @Injectable()
 export class SSRService {
