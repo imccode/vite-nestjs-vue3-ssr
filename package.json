@@ -1,0 +1,37 @@
+{
+  "name": "vue3demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "NODE_ENV=development nest start --watch",
+    "dev:debug": "NODE_ENV=development nest start --debug --watch",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:pages": "vite build --ssr src/client/main.tsx --outDir dist/server/pages",
+    "build:server": "NODE_ENV=production nest build",
+    "build": "npm run build:pages && npm run build:server && npm run build:client",
+    "start": "NODE_ENV=production node ./dist/server/main"
+  },
+  "dependencies": {
+    "@nestjs/common": "^8.1.2",
+    "@nestjs/core": "^8.1.2",
+    "@nestjs/platform-express": "^8.1.2",
+    "naive-ui": "^2.20.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.4.0",
+    "vfonts": "^0.1.0",
+    "vue": "^3.2.16",
+    "vue-router": "4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^8.1.4",
+    "@nestjs/schematics": "^8.0.4",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.6",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "source-map-support": "^0.5.20",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.13",
+    "vue-tsc": "^0.3.0"
+  }
+}
