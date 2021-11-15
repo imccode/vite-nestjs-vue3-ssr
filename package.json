@@ -5,7 +5,7 @@
     "dev": "NODE_ENV=development nest start --watch",
     "dev:debug": "NODE_ENV=development nest start --debug --watch",
     "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:pages": "vite build --ssr src/client/main.tsx --outDir dist/server/pages",
+    "build:pages": "vite build --ssr src/client/main.tsx --outDir dist/pages",
     "build:server": "NODE_ENV=production nest build",
     "build": "npm run build:pages && npm run build:client && npm run build:server",
     "start": "NODE_ENV=production node ./dist/server/main"

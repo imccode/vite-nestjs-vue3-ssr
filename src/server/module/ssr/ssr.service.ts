@@ -44,8 +44,7 @@ export class SSRService {
   }
 
   async ssrRender(url: string, data: RenderParams['ssrData'] = {}) {
-    // @ts-ignore
-    const { createApp } = require('../../pages/main')
+    const { createApp } = require(resolvePath('dist/pages/main.js'))
 
     return await this.render({
       url,
