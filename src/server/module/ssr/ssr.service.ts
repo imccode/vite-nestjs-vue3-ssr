@@ -38,7 +38,7 @@ export class SSRService {
     return await this.render({
       url,
       appConfig: createApp(data),
-      template: readFileSync(resolvePath('index.html'), 'utf-8'),
+      template,
       ssrData: data,
     })
   }
